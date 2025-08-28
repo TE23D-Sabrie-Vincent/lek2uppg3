@@ -2,28 +2,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
+        Scanner scanner = new Scanner(System.in);
         boolean bool = true;
 
-        Scanner scanner = new Scanner(System.in);
-        int val;
-        val = scanner.nextInt();
-
-        // for (int i = 0; i < args.length; i++) {
-
-        // int input;
-        // if (scanner.hasNextInt()) {
-        // input = scanner.nextInt();
-        // } else {
-        // System.out.println("Skriv bara nummer, inga bokstäver!");
-        // scanner.next();
-
-        // break;
-        // }
-        // }
-
-        // for (int i = 0; i < args.length;) {
         while (bool) {
+
+            
 
             System.out.println("Meny");
             System.out.println("1.Addition");
@@ -32,6 +16,9 @@ public class App {
             System.out.println("4.division");
             System.out.println("5.Avsluta");
             System.out.println("Välj 1-5: ");
+
+            int val;
+            val = scanner.nextInt();
 
             if (val == 5) {
                 System.out.println("Stänger av");
@@ -48,29 +35,27 @@ public class App {
 
                 double result = 0;
 
-                result = num1 + num2;
-                System.out.println(result);
+                if (val == 1) {
+                    result = num1 + num2;
+                    System.out.println(result);
+
+                }
+
+                else if (val == 2) {
+                    result = num1 - num2;
+                    System.out.println(result);
+                }
+
+                else if (val == 3) {
+                    result = num1 * num2;
+                    System.out.println(result);
+                }
+
+                else if (val == 4) {
+                    result = num1 * num2;
+                    System.out.println(result);
+                }
             }
-
-            // switch (val) {
-
-            // case "1":
-            // result = num1 + num2;
-
-            // case "2":
-            // result = num1 - num2;
-
-            // case "3":
-            // result = num1 * num2;
-
-            // case "4":
-            // result = num1 / num2;
-
-            // case "5":
-            // break;
-            // }
-            // System.out.println(result);
-            // }
         }
         scanner.close();
     }
